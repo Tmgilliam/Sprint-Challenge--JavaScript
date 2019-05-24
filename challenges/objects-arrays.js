@@ -15,7 +15,7 @@ let tyrannosaurus = {
   "length": "12m",
   "period": "Late Cretaceious",
   "speak": function() {
-    return "RAWERSRARARWERSARARARRRR!";
+    return "Rahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh!";
   }
 }
 
