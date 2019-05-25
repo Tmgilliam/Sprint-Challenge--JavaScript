@@ -43,7 +43,7 @@ closure is a scope that allows the nested function to use variable/s of the pare
 -Global Binding -
 -Explicit Binding
 -New Binding
--Window Binding
+-Implicit Binding
 
 -Whenever a function is contained in the global scope, the value of this inside of that function will be the window object.
 -Whenever a function is called by a preceding dot, the object before that dot is this.
@@ -53,7 +53,7 @@ closure is a scope that allows the nested function to use variable/s of the pare
 
 5. Why do we need super() in an extended class?
 
-The keyword super helps programmers to access and call functions from a parent object( allows us to acces the extended class)
+The keyword super helps programmers to access and call functions from a parent object( allows us to access the extended class)
 
 ## Project Set up
 

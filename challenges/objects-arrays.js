@@ -95,6 +95,10 @@ const grads2020 = [
   {"id":10,"first_name":"Hube","university":"Universitat Rovira I Virgili Tarragona","email":"hlethbrig9@foxnews.com"}
 ]
 const universities = [];
+
+grads2020.forEach(function (grads2020) {
+  universities.push(`${grads2020.university}`);
+});
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -117,13 +121,14 @@ const uni = [];
 for (let i = 0; i < graduates.length; i++) {
   uni.push(graduates[i].university);
 }  
+const uni2 = [];
 for (let i = 0; i < graduates.length; i++) {
   if (uni[i].includes("Uni")) {
-  uni.push(uni[i]);
+  uni2.push(uni[i]);
   }
 }
 
-console.log(uni);
+console.log(uni2);
 
 
 // ==== ADVANCED Array Methods ====
@@ -159,7 +164,9 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase = [];
+let lowerCase = zooAnimals.map((animal) => {
+  return animal.animal_name.toLowerCase();
+});
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
@@ -168,10 +175,8 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 
-const lowerPopulation = [];
-let eachName = zooAnimals.forEach(function(i){
-  animalNames.push(`Name: ${i.animal_name}, Scientific: ${i.scientific_name}`);
-});
+const lowerPopulation = zooAnimals.filter(lowerPopulation => lowerPopulation.zooanimals < 5);
+
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
@@ -179,17 +184,11 @@ console.log(lowerPopulation);
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
 
 */
-const populationTotal = 0;
+const data = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const reducer = (acc, curr) => acc + curr
 
-let allpop = zooAnimals.reduce((populationTotal, populationAmount) => {
-  return populationTotal + populationAmount.population;
-}, 0);
-
-console.log(populationTotal);
-
+console.log(data.reduce(reducer, 0));
 /* 
 
-Stretch: If you haven't already, convert your array method callbacks into arrow functions.
-
+// Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 */
-
